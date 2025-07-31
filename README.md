@@ -8,7 +8,7 @@ The imported file can only be a JSON object
 
 The data cannot be parsed as runtime as it impacts the speed at which the isolate can instantiate, so no loops to add a domain to a Set etc
 
-Precision cant be under 48 bits as this causes collisions, look up the Birthday Paradox
+Precision cant be under 48 bits as this causes collisions, look up the Birthday Paradox (SHA512 doesnt collide here at 48 bits, SHA256 collides at 64 bits)
 
 generate_json.php - this generates the JSON from domains listed in blacklists_api.json
 
