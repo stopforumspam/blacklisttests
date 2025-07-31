@@ -21,4 +21,5 @@ domain_blacklist_b64_test1.json - the JSON that is built/compile in the API runt
 Target 
 - an O(log n) speed target
 - the resultant file MUST be importable via javascript require() so must not be binary
-- only a SINGLE hash operation.  They're expensive and looping them is as well.  You can slice up a SHA256/512 into segments and use those for when more hashes are required (bloom/cuckoo etc) but doing bitwise operations of 16 hashes in a loop is expensive, and must have an error rate of under 1% chance PER YEAR of both false positive and false negative
+- only a SINGLE hash operation.  They're expensive and looping them is as well.  You can slice up a SHA256/512 into segments and use those for when more hashes are required (bloom/cuckoo etc) but doing bitwise operations of 16 hashes in a loop is expensive, and must have an error rate of under 1% chance PER YEAR of both false positive and false negative, ie, if tests run 100 billion iterations without a collision then that works
+
